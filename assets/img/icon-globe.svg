@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="2.4" fill="none">
+    <circle cx="32" cy="32" r="27"/>
+    <ellipse cx="32" cy="32" rx="11.5" ry="27"/>
+    <line x1="5" y1="32" x2="59" y2="32"/>
+    <path d="M8.5 19.5H55.5"/>
+    <path d="M8.5 44.5H55.5"/>
+    <path d="M32 5V59"/>
+    <path d="M15.8 10.5C11 15.8 8.3 23.3 8.3 32C8.3 40.7 11 48.2 15.8 53.5"/>
+    <path d="M48.2 10.5C53 15.8 55.7 23.3 55.7 32C55.7 40.7 53 48.2 48.2 53.5"/>
+  </g>
+</svg>
