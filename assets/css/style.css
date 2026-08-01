@@ -275,9 +275,10 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 }
 
 .hero-stats {
-  display: flex;
-  gap: 36px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 28px;
+  max-width: 560px;
 }
 
 .hero-stats div strong {
@@ -794,6 +795,6 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   .steps { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
-  .hero-stats { gap: 24px; }
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 20px 24px; }
   .section { padding: 64px 0; }
 }
