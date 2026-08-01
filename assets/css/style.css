@@ -523,31 +523,17 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 
 .practice-strip .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 }
 
 .practice-strip p {
   margin: 0;
   font-size: 13.5px;
   color: var(--ink-soft);
-  max-width: 320px;
+  max-width: 480px;
 }
 
-.practice-logos {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  font-family: var(--font-head);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--navy);
-  font-size: 14px;
-}
-
-.practice-logos span { opacity: 0.7; }
 
 /* Form */
 .form-section {
