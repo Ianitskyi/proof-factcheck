@@ -153,7 +153,8 @@
           <div class="row"><span>Ім'я журналіста</span><span>Обов'язково</span></div>
           <div class="row"><span>Медіа / редакція</span><span>Обов'язково</span></div>
           <div class="row"><span>Контакт для зв'язку</span><span>Обов'язково</span></div>
-          <div class="row"><span>Посилання на матеріал</span><span>Можна пізніше</span></div>
+          <div class="row"><span>Посилання на матеріал</span><span>Обов'язково</span></div>
+          <div class="row"><span>Посилання на файлообмінник з додатковими матеріалами</span><span>Обов'язково</span></div>
           <a href="#request" class="btn btn-primary btn-block" style="margin-top:24px;">Перейти до заявки</a>
         </div>
       </div>
@@ -200,7 +201,7 @@
       <div>
         <p class="eyebrow">Заявка</p>
         <h2>Надішліть запит на фактчекінг</h2>
-        <p>Залиште своє ім'я або псевдонім, медіа, яке ви представляєте, та контакти для зв'язку. Посилання на сам матеріал не обов'язкове на цьому етапі — його можна надіслати пізніше.</p>
+        <p>Залиште своє ім'я, медіа, яке ви представляєте, контакти для зв'язку та посилання на матеріал і додаткові докази.</p>
         <div class="form-note">
           <span class="badge">⏱ Відповідаємо протягом 24 годин</span>
           <p style="margin:0;font-size:14.5px;color:var(--ink-soft);">За 24 години повідомимо, чи береться Proof за ваш матеріал, і надішлемо наступні кроки. Сам фактчекінг після цього триває кілька днів — залежно від обсягу матеріалу.</p>
@@ -233,8 +234,12 @@
             </select>
           </div>
           <div class="field full">
-            <label for="link">Посилання на матеріал (необов'язково)</label>
-            <input type="url" id="link" name="material_link" placeholder="Google Drive / Docs з текстом розслідування">
+            <label for="link">Посилання на матеріал <span class="req">*</span></label>
+            <input type="url" id="link" name="material_link" required placeholder="Google Drive / Docs з текстом розслідування">
+          </div>
+          <div class="field full">
+            <label for="filesLink">Посилання на файлообмінник з додатковими матеріалами <span class="req">*</span></label>
+            <input type="url" id="filesLink" name="files_link" required placeholder="Google Drive з доказами, документами тощо">
           </div>
           <div class="field full">
             <label for="message">Коротко про розслідування (необов'язково)</label>
