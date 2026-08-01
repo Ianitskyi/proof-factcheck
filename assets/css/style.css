@@ -34,6 +34,7 @@ body {
   background: var(--white);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
@@ -492,7 +493,7 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 
 .mini-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-top: 28px;
 }
@@ -500,6 +501,7 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 .mini-stats div {
   border-left: 2px solid var(--blue);
   padding-left: 14px;
+  min-width: 0;
 }
 
 .mini-stats strong {
@@ -507,6 +509,7 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   font-family: var(--font-head);
   font-size: 24px;
   color: #fff;
+  overflow-wrap: break-word;
 }
 
 .mini-stats span { font-size: 13px; color: #a9c8de; }
