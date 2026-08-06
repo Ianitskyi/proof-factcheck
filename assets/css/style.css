@@ -627,76 +627,22 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   box-shadow: var(--shadow);
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.gform-card { padding: 12px; }
+
+.gform-embed {
+  width: 100%;
+  height: 1050px;
+  border: 0;
+  display: block;
+  border-radius: calc(var(--radius) - 6px);
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.field.full { grid-column: 1 / -1; }
-
-.field label {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--navy);
-}
-
-.field label .req { color: var(--danger); }
-
-.field input,
-.field select,
-.field textarea {
-  font-family: var(--font-body);
-  font-size: 15px;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1.5px solid var(--blue-light);
-  background: #fbfdff;
-  color: var(--ink);
-  outline: none;
-  transition: border-color .15s ease, box-shadow .15s ease;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(0,115,172,0.15);
-}
-
-.field textarea { resize: vertical; min-height: 100px; }
-
-.field .hint { font-size: 12.5px; color: var(--ink-soft); }
-
-.consent {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
+.gform-fallback {
+  text-align: center;
   font-size: 13px;
   color: var(--ink-soft);
-  margin-bottom: 22px;
+  margin: 12px 0 4px;
 }
-
-.consent input { margin-top: 3px; }
-
-.form-status {
-  margin-top: 16px;
-  padding: 14px 16px;
-  border-radius: 10px;
-  font-size: 14px;
-  display: none;
-}
-
-.form-status.show { display: block; }
-.form-status.ok { background: #e7f7ee; color: var(--success); border: 1px solid #bfe6cf; }
-.form-status.err { background: #fdecea; color: var(--danger); border: 1px solid #f4c6c1; }
 
 /* FAQ */
 .faq {
@@ -831,7 +777,7 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   .main-nav.open { transform: translateX(0); }
   .nav-toggle { display: block; }
   .cards-3 { grid-template-columns: 1fr; }
-  .form-grid { grid-template-columns: 1fr; }
+  .gform-embed { height: 1500px; }
   .footer-top { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: 1fr 1fr; gap: 20px 24px; }
   .section { padding: 64px 0; }

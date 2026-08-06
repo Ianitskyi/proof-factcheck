@@ -223,53 +223,10 @@
         </div>
       </div>
 
-      <form id="proofForm" class="form-card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-grid">
-          <div class="field">
-            <label for="name">Ім'я журналіста <span class="req">*</span></label>
-            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Як до вас звертатися">
-          </div>
-          <div class="field">
-            <label for="media">Медіа / редакція <span class="req">*</span></label>
-            <input type="text" id="media" name="media" required placeholder="Назва редакції або «фрілансер»">
-          </div>
-          <div class="field">
-            <label for="contact">Контакт для зв'язку <span class="req">*</span></label>
-            <input type="text" id="contact" name="contact" required placeholder="Email, телефон або Telegram">
-            <span class="hint">Тим каналом ми зв'яжемось з вами протягом 24 годин</span>
-          </div>
-          <div class="field">
-            <label for="role">Ваша роль</label>
-            <select id="role" name="role">
-              <option value="">Оберіть, якщо зручно</option>
-              <option>Автор_ка розслідування</option>
-              <option>Редактор_ка</option>
-              <option>Менеджер_ка проєкту</option>
-              <option>Інше</option>
-            </select>
-          </div>
-          <div class="field full">
-            <label for="link">Посилання на матеріал <span class="req">*</span></label>
-            <input type="url" id="link" name="material_link" required placeholder="Google Drive / Docs з текстом розслідування">
-          </div>
-          <div class="field full">
-            <label for="filesLink">Посилання на файлообмінник з додатковими матеріалами <span class="req">*</span></label>
-            <input type="url" id="filesLink" name="files_link" required placeholder="Google Drive з доказами, документами тощо">
-          </div>
-          <div class="field full">
-            <label for="message">Коротко про розслідування</label>
-            <textarea id="message" name="message" placeholder="Тема, обсяг, бажані терміни фактчекінгу"></textarea>
-          </div>
-        </div>
-        <label class="consent">
-          <input type="checkbox" required name="consent">
-          <span>Погоджуюсь, що вказані дані буде використано лише для зв'язку щодо фактчекінгу мого матеріалу.</span>
-        </label>
-        <input type="hidden" name="_subject" value="Нова заявка на фактчекінг Proof">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Надіслати заявку</button>
-        <div class="form-status" id="formStatus" role="status"></div>
-      </form>
+      <div class="form-card gform-card">
+        <iframe class="gform-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSfsxjQuYMP9SnEcM7PNdhj1H6qCzoIo4DrSgPiPYfq0QyrL2A/viewform?embedded=true" title="Форма заявки на фактчекінг Proof">Завантаження форми…</iframe>
+        <p class="gform-fallback">Форма не завантажилась? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsxjQuYMP9SnEcM7PNdhj1H6qCzoIo4DrSgPiPYfq0QyrL2A/viewform" target="_blank" rel="noopener">Відкрити її в новій вкладці →</a></p>
+      </div>
     </div>
   </section>
 
