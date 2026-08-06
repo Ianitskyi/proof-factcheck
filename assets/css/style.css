@@ -312,6 +312,19 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   gap: 14px;
 }
 
+.hero-card ul + .hero-card-subhead { margin-top: 20px; }
+
+.hero-card-subhead {
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: var(--blue-light);
+  margin: 20px 0 14px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
 .hero-card li {
   display: flex;
   gap: 12px;
@@ -361,35 +374,72 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 .card h3 { margin-bottom: 10px; }
 .card p { margin-bottom: 0; font-size: 15px; }
 
-/* Steps */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  counter-reset: step;
-}
-
-.step {
+/* How it works — visual flow diagram */
+.flow-diagram {
   position: relative;
-  padding: 30px 22px 24px;
-  background: #fff;
-  border-radius: var(--radius);
-  border: 1px solid var(--blue-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 8px;
 }
 
-.step .num {
+.flow-diagram::before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background-image: repeating-linear-gradient(to right, var(--blue) 0 8px, transparent 8px 18px);
+  z-index: 0;
+}
+
+.flow-node {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.flow-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 8px var(--blue-pale);
+  margin-bottom: 16px;
+}
+
+.flow-icon svg { width: 26px; height: 26px; flex: none; }
+
+.flow-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-duration {
+  display: inline-block;
   font-family: var(--font-head);
-  font-size: 42px;
-  color: var(--blue-light);
-  -webkit-text-stroke: 1.5px var(--blue);
-  color: transparent;
-  line-height: 1;
-  margin-bottom: 14px;
-  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
 }
 
-.step h3 { font-size: 17px; margin-bottom: 8px; }
-.step p { font-size: 14.5px; margin-bottom: 0; }
+.flow-text h3 { font-size: 17px; margin-bottom: 8px; }
+.flow-text p { font-size: 14.5px; margin-bottom: 0; max-width: 240px; }
 
 /* Who we check / audience */
 .split {
@@ -493,8 +543,9 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 
 .mini-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+  max-width: 420px;
   margin-top: 28px;
 }
 
@@ -768,7 +819,6 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
   .cards-3 { grid-template-columns: 1fr 1fr; }
-  .steps { grid-template-columns: 1fr 1fr; }
   .split { grid-template-columns: 1fr; gap: 32px; }
   .about-grid { grid-template-columns: 1fr; }
   .about-grid .about-logo-box { order: -1; max-width: 260px; margin: 0 auto; }
@@ -781,9 +831,15 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   .main-nav.open { transform: translateX(0); }
   .nav-toggle { display: block; }
   .cards-3 { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: 1fr 1fr; gap: 20px 24px; }
   .section { padding: 64px 0; }
+
+  .flow-diagram { flex-direction: column; align-items: stretch; gap: 28px; }
+  .flow-diagram::before { top: 0; bottom: 0; left: 31px; right: auto; width: 2px; height: auto; background-image: repeating-linear-gradient(to bottom, var(--blue) 0 8px, transparent 8px 18px); }
+  .flow-node { flex-direction: row; align-items: flex-start; text-align: left; gap: 18px; }
+  .flow-icon { margin-bottom: 0; flex: none; }
+  .flow-text { align-items: flex-start; }
+  .flow-text p { max-width: none; }
 }
